@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "canonical_registry": "https://github.com/vLLM-HUST/vllm-hust-docs/tree/codex/ecosystem-architecture-reorganization/registry",
+  "repository": "https://github.com/vLLM-HUST/vllm-hust.github.io",
+  "repository_role": "public_application",
+  "relation_to_runtime": "presents_canonical_registry",
+  "lifecycle": "community",
+  "artifacts": [
+    {
+      "id": "vllm-hust-github-pages-redirect",
+      "artifact_type": "application",
+      "system_role": "product_ui",
+      "delivery_model": "source_repository",
+      "execution_planes": ["offline"],
+      "integration_contracts": []
+    }
+  ],
+  "system_boundaries": {
+    "is": ["a lightweight GitHub Pages redirect to the official public website"],
+    "is_not": [
+      "the canonical website implementation",
+      "the authority for ecosystem classification",
+      "a runtime component or plugin catalog of its own"
+    ]
+  },
+  "validation": ["git diff --check"],
+  "compatibility_document": "README.md"
+}
